@@ -1,0 +1,8 @@
+- hosts: all
+
+  vars:
+    webpackage: "httpd"
+    docRoot: "/var/www/html/index.html"
+    webservice: "httpd"
+    isStarted: started
+
