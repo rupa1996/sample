@@ -1,0 +1,23 @@
+- hosts: all
+
+  tasks:
+    - name: "Installing httpd package"
+      package:
+        name: httpd
+        state: present
+
+    - name: "Installing php package"
+      package:
+        name: php
+        state: present
+
+    - name: "Copying index file to /var/www/html"
+      copy:
+        src: /root/rupa.html
+        dest: /var/www/html/index.html
+
+    - name: "Starting httpd service"
+      service:
+        name: httpd
+        state: started
+
